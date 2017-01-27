@@ -40,6 +40,7 @@
             this.Text = "皮肤检测";
             this.ResumeLayout(false);
 
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         }
 
         #endregion

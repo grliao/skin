@@ -15,6 +15,8 @@ namespace Skin.Controls.About
     /// </summary>
     public partial class AboutControl : UserControl
     {
+        private int _count = 0;
+
         public AboutControl()
         {
             InitializeComponent();
@@ -44,14 +46,20 @@ namespace Skin.Controls.About
             this.pbCompanyVedio.MouseClick += GoCompanyVedio;
             this.pbFounder.MouseClick += GoFounder;
             this.pbSenseOfWorth.MouseClick += GoSenseOfWorth;
-        }
 
+            this.pbNext.MouseClick += OnNext;
+        }
 
         private void GoSenseOfWorth(object sender, MouseEventArgs e)
         {
             this.pbAbout.Image = Resources.About_SenseOfWorth;
             this.ctrlMediaPlayer.Visible = false;
             this.ctrlMediaPlayer.Stop();
+
+            if(e != null)
+            {
+                this._count = 1;
+            }
         }
 
         private void GoFounder(object sender, MouseEventArgs e)
@@ -59,6 +67,11 @@ namespace Skin.Controls.About
             this.pbAbout.Image = Resources.About_Founder;
             this.ctrlMediaPlayer.Visible = false;
             this.ctrlMediaPlayer.Stop();
+
+            if (e != null)
+            {
+                this._count = 3;
+            }
         }
 
         private void GoCompanyVedio(object sender, MouseEventArgs e)
@@ -66,11 +79,34 @@ namespace Skin.Controls.About
             this.pbAbout.Image = Resources.About_CompanyVedio;
             this.ctrlMediaPlayer.Visible = true;
             this.ctrlMediaPlayer.Play();
+
+            if (e != null)
+            {
+                this._count = 2;
+            }
         }
 
         private void GoHomePage(object sender, MouseEventArgs e)
         {
             MainForm.Instance.SetCurrentContentPanel(typeof(HomePageControl));
+        }
+
+        private void OnNext(object sender, MouseEventArgs e)
+        {
+            if (this._count % 3 == 0)
+            {
+                this.GoSenseOfWorth(this, null);
+            }
+            else if (this._count % 3 == 1)
+            {
+                this.GoCompanyVedio(this, null);
+            }
+            else if (this._count % 3 == 2)
+            {
+                this.GoFounder(this, null);
+            }
+
+            this._count += 1;
         }
     }
 }
