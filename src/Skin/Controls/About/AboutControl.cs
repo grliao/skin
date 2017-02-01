@@ -20,6 +20,8 @@ namespace Skin.Controls.About
         public AboutControl()
         {
             InitializeComponent();
+
+            //this.RegistResizeControls(this.pbCompanyVedio, this.pbFounder, this.pbSenseOfWorth,this.ctrlMediaPlayer);
         }
 
         protected override void OnLoad(EventArgs e)

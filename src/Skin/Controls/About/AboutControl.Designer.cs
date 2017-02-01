@@ -67,7 +67,7 @@
             // 
             // pbFounder
             // 
-            this.pbFounder.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            //this.pbFounder.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pbFounder.BackColor = System.Drawing.Color.Transparent;
             this.pbFounder.Image = global::Skin.Resources.Founder;
             this.pbFounder.Location = new System.Drawing.Point(757, 264);
@@ -79,7 +79,7 @@
             // 
             // pbCompanyVedio
             // 
-            this.pbCompanyVedio.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            //this.pbCompanyVedio.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pbCompanyVedio.BackColor = System.Drawing.Color.Transparent;
             this.pbCompanyVedio.Image = global::Skin.Resources.CompanyVedio;
             this.pbCompanyVedio.Location = new System.Drawing.Point(757, 216);
@@ -91,7 +91,7 @@
             // 
             // pbSenseOfWorth
             // 
-            this.pbSenseOfWorth.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            //this.pbSenseOfWorth.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.pbSenseOfWorth.BackColor = System.Drawing.Color.Transparent;
             this.pbSenseOfWorth.Image = global::Skin.Resources.SenseOf_Worth;
             this.pbSenseOfWorth.Location = new System.Drawing.Point(757, 166);
@@ -138,8 +138,8 @@
             // 
             // ctrlMediaPlayer
             // 
-            this.ctrlMediaPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            //this.ctrlMediaPlayer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            //| System.Windows.Forms.AnchorStyles.Right)));
             this.ctrlMediaPlayer.Location = new System.Drawing.Point(120, 86);
             this.ctrlMediaPlayer.Name = "ctrlMediaPlayer";
             this.ctrlMediaPlayer.Size = new System.Drawing.Size(615, 315);

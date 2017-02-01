@@ -12,22 +12,38 @@ namespace Skin.Controls
     /// </summary>
     public class AutoResizeControl:UserControl
     {
-        private Size DefaultSize = new Size(1024, 560);
+        private Size _previousSize = new Size(1024, 560);
+        
 
         private Control[] _controls = null;
-        private List<Point> _controlPositions = new List<Point>();
+
+        public AutoResizeControl()
+        {
+            this.Resize += OnResize;
+        }
 
         public void RegistResizeControls(params Control[] controls)
         {
             _controls = controls;
+        }
 
-            if (controls != null)
+        private void OnResize(object sender, EventArgs e)
+        {
+            if(this.Size != this._previousSize)
             {
-                for (int index = 0; index < controls.Count(); index++) 
+                if (this._controls != null)
                 {
-                    this._controlPositions[index] = controls[index].Location;
+                    foreach (var eachControl in _controls)
+                    {
+                        int x = (int)(((double)eachControl.Location.X * this.Size.Width) / this._previousSize.Width);
+                        //int y = (int)(((double)eachControl.Location.Y * this.Size.Height) / this._previousSize.Height);
+                        int y = eachControl.Location.Y;
+                        eachControl.Location = new Point(x, y);
+                    }
                 }
             }
+
+            this._previousSize = this.Size;
         }
     }
 }
