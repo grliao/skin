@@ -56,6 +56,9 @@
     <Compile Include="Controls\About\MediaPlayerControl.Designer.cs">
       <DependentUpon>MediaPlayerControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\AutoResizeControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Controls\TransparentPictureBox.cs">
       <SubType>Component</SubType>
     </Compile>

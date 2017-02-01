@@ -21,7 +21,7 @@ namespace Skin.Controls.About
         {
             base.OnLoad(e);
 
-            if (this.DesignMode)
+            if (!this.DesignMode)
             {
                 var playList = axMediaPlayer.playlistCollection.newPlaylist("skin");
 
