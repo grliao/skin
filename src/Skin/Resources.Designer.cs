@@ -113,6 +113,16 @@ namespace Skin {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AddProject {
+            get {
+                object obj = ResourceManager.GetObject("AddProject", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Close {
             get {
                 object obj = ResourceManager.GetObject("Close", resourceCulture);
@@ -126,6 +136,16 @@ namespace Skin {
         internal static System.Drawing.Bitmap CompanyVedio {
             get {
                 object obj = ResourceManager.GetObject("CompanyVedio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap DeleteProject {
+            get {
+                object obj = ResourceManager.GetObject("DeleteProject", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +283,49 @@ namespace Skin {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ProjectDetail {
+            get {
+                object obj = ResourceManager.GetObject("ProjectDetail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProjectList {
+            get {
+                object obj = ResourceManager.GetObject("ProjectList", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProjectSearch {
+            get {
+                object obj = ResourceManager.GetObject("ProjectSearch", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Refresh {
             get {
                 object obj = ResourceManager.GetObject("Refresh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SaveProject {
+            get {
+                object obj = ResourceManager.GetObject("SaveProject", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

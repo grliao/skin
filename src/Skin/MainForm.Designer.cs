@@ -35,12 +35,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1008, 521);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(1024, 560);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "皮肤检测";
             this.ResumeLayout(false);
 
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
         }
 
         #endregion

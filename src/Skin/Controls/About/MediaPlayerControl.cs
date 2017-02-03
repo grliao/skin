@@ -25,16 +25,21 @@ namespace Skin.Controls.About
             {
                 var playList = axMediaPlayer.playlistCollection.newPlaylist("skin");
 
-                var files = Directory.GetFiles(Path.Combine(Application.StartupPath, "video")).Where(p => p.EndsWith(".avi")
-                || p.EndsWith("wmv") || p.EndsWith(".mpeg") || p.EndsWith(".mpg")).ToList();
+                string path = Path.Combine(Application.StartupPath, "video");
 
-                // 设置视频目录
-                foreach (var eachFile in files)
+                if (Directory.Exists(path))
                 {
-                    playList.appendItem(axMediaPlayer.newMedia(eachFile));
-                }
+                    var files = Directory.GetFiles(path).Where(p => p.EndsWith(".avi")
+                    || p.EndsWith("wmv") || p.EndsWith(".mpeg") || p.EndsWith(".mpg")).ToList();
 
-                axMediaPlayer.currentPlaylist = playList;
+                    // 设置视频目录
+                    foreach (var eachFile in files)
+                    {
+                        playList.appendItem(axMediaPlayer.newMedia(eachFile));
+                    }
+
+                    axMediaPlayer.currentPlaylist = playList;
+                }
             }
         }
         

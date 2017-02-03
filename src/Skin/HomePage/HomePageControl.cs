@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using Skin.Controls;
 using Skin.Controls.About;
+using Skin.Controls.Projects;
 
 namespace Skin.HomePage
 {
@@ -41,10 +42,11 @@ namespace Skin.HomePage
             this.pbExit.MouseClick += CloseApplication;
 
             // 关于
-            this.pbAbout.MouseClick += PbAbout_MouseClick;
+            this.pbAbout.MouseClick += OnCompanyAbout;
+            this.pbNewProject.MouseClick += OnNewProject;
         }
 
-        private void PbAbout_MouseClick(object sender, MouseEventArgs e)
+        private void OnCompanyAbout(object sender, MouseEventArgs e)
         {
             MainForm.Instance.SetCurrentContentPanel(typeof(AboutControl));
         }
@@ -52,6 +54,11 @@ namespace Skin.HomePage
         private void CloseApplication(object sender, MouseEventArgs e)
         {
             this.ParentForm.Close();
+        }
+
+        private void OnNewProject(object sender, MouseEventArgs e)
+        {
+            MainForm.Instance.SetCurrentContentPanel(typeof(ProjectListControl));
         }
     }
 }

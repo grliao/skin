@@ -133,11 +133,17 @@
   <data name="About_SenseOfWorth" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\About_SenseOfWorth.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="AddProject" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\NewProject.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CompanyVedio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\CompanyVedio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DeleteProject" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\DeleteProject.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Enter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Enter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +184,20 @@
   <data name="Previous" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Previous.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ProjectDetail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ProjectDetail.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ProjectList" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ProjectList.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ProjectSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\ProjectSearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SaveProject" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\SaveProject.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SenseOf_Worth" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\SenseOf Worth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -28,6 +28,14 @@ namespace Skin
             }
         }
 
+        public Control CurrentControl
+        {
+            get
+            {
+                return this._currentControl;
+            }
+        }
+
         protected override void OnLoad(EventArgs e)
         {
             base.OnLoad(e);
@@ -37,7 +45,12 @@ namespace Skin
         // 设置当前内容面板
         public void SetCurrentContentPanel(Control contentPanel)
         {
-            if(contentPanel == null)
+            this.SetCurrentContentPanel(contentPanel, true);
+        }
+
+        public void SetCurrentContentPanel(Control contentPanel, bool disposePreviousContentPanel)
+        {
+            if (contentPanel == null)
             {
                 return;
             }
@@ -50,7 +63,10 @@ namespace Skin
 
             if (this._currentControl != null)
             {
-                this._currentControl.Dispose();
+                if (disposePreviousContentPanel)
+                {
+                    this._currentControl.Dispose();
+                }
             }
 
             this._currentControl = contentPanel;
@@ -63,6 +79,11 @@ namespace Skin
         public void SetCurrentContentPanel(Type contentPanelType)
         {
             this.SetCurrentContentPanel(Activator.CreateInstance(contentPanelType) as Control);
+        }
+
+        public void SetCurrentContentPanel(Type contentPanelType, bool disposePreviousContentPanel)
+        {
+            this.SetCurrentContentPanel(Activator.CreateInstance(contentPanelType) as Control,disposePreviousContentPanel);
         }
     }
 }

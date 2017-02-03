@@ -19,7 +19,7 @@ namespace Skin.Controls
 
         public AutoResizeControl()
         {
-            this.Resize += OnResize;
+            //this.Resize += OnResize;
         }
 
         public void RegistResizeControls(params Control[] controls)
