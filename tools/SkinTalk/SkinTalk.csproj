@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD000628-528E-4DE0-A3C5-C057B23CAE9B}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SkinTalk</RootNamespace>
+    <AssemblyName>SkinTalk</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>lib\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Controls">
+      <HintPath>lib\AForge.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>lib\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>lib\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>lib\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Calculator\AbstractCalculator.cs" />
+    <Compile Include="Calculator\HumanSkinCalculator.cs" />
+    <Compile Include="Calculator\ImageInfo.cs" />
+    <Compile Include="Calculator\ImageProcessor.cs" />
+    <Compile Include="Calculator\InflammationCalculator.cs" />
+    <Compile Include="Calculator\InstallLensCalculator.cs" />
+    <Compile Include="Calculator\MositureCalculator.cs" />
+    <Compile Include="Calculator\OilValueCalclator.cs" />
+    <Compile Include="Calculator\PigmentCalculator.cs" />
+    <Compile Include="Calculator\PoresCalculator.cs" />
+    <Compile Include="Calculator\TextureCalculator.cs" />
+    <Compile Include="Core\BinaryStreamStack.cs" />
+    <Compile Include="Core\FilePart.cs" />
+    <Compile Include="Core\FormDataFormatter.cs" />
+    <Compile Include="Core\FormProcessingBehavior.cs" />
+    <Compile Include="Core\FormProcessingBehaviorElement.cs" />
+    <Compile Include="Core\MultipartFormDataParser.cs" />
+    <Compile Include="Core\MultipartParseException.cs" />
+    <Compile Include="Core\ParameterPart.cs" />
+    <Compile Include="Core\RebufferableBinaryReader.cs" />
+    <Compile Include="Core\StreamMessageHelper.cs" />
+    <Compile Include="Core\SubsequenceFinder.cs" />
+    <Compile Include="ISkinService.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkinService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
