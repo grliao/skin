@@ -14,34 +14,163 @@ namespace VFWTest
 {
     public partial class VideoForm : Form
     {
-        FilterInfoCollection videoDevices;
         VideoCaptureDevice videoSource;
-        public int selectedDeviceIndex = 0;
 
         public VideoForm()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public FilterInfo CurrentFilterInfo
         {
-            videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            selectedDeviceIndex = 0;
-            videoSource = new VideoCaptureDevice(videoDevices[selectedDeviceIndex].MonikerString);//连接摄像头。
-            videoSource.VideoResolution = videoSource.VideoCapabilities[selectedDeviceIndex];
-            vedioPalyer.VideoSource = videoSource;
-            // set NewFrame event handler
-            vedioPalyer.Start();
+            get
+            {
+                var item = this.cboxDevice.SelectedItem as FilterInfoItem;
+                if (item == null)
+                {
+                    return null;
+                }
+
+                return item.FilterInfo;
+            }
+        }
+
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            try
+            {
+                var videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+                foreach (FilterInfo eachDevice in videoDevices)
+                {
+                    this.cboxDevice.Items.Add(new FilterInfoItem(eachDevice));
+                }
+
+                if (videoDevices.Count > 0)
+                {
+                    this.cboxDevice.SelectedIndex = 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                this.AppendContext("获取当前视频输入设备失败，详细信息:" + ex.Message);
+            }
+            
+        }
+
+        private void Start(object sender, EventArgs e)
+        {
+            if (this.CurrentFilterInfo == null)
+            {
+                this.AppendContext("请选择视频输入设备");
+                this.cboxDevice.Focus();
+                return;
+            }
+
+            if (this.vedioPalyer.IsRunning)
+            {
+                try
+                {
+                    this.Cursor = Cursors.WaitCursor;
+                    this.videoSource.Stop();
+
+                    this.btnConnect.Text = "开始连接";
+                }
+                catch (Exception ex)
+                {
+                    this.AppendContext("停止视频输入设备失败,详细信息:" + ex.Message);
+                }
+                finally
+                {
+                    this.Cursor = Cursors.Default;
+                }
+            }
+            else
+            {
+                videoSource = new VideoCaptureDevice(this.CurrentFilterInfo.MonikerString);//连接摄像头。
+
+                if (videoSource.VideoCapabilities == null || videoSource.VideoCapabilities.Length == 0)
+                {
+                    this.AppendContext("视频输入设备有效参数为空");
+                    return;
+                }
+
+                videoSource.VideoResolution = videoSource.VideoCapabilities[0];
+                vedioPalyer.VideoSource = videoSource;
+                try
+                {
+                    this.Cursor = Cursors.WaitCursor;
+                    vedioPalyer.Start();
+                    this.AppendContext("启动视频输入设成功");
+                    this.btnConnect.Text = "停止连接";
+                }
+                catch (Exception ex)
+                {
+                    this.AppendContext("启动视频输入设备失败,详细信息:" + ex.Message);
+                }
+                finally
+                {
+                    this.Cursor = Cursors.Default;
+                }
+            }
+        }
+
+        private void AppendContext(string message)
+        {
+            if (this.txtContent.InvokeRequired)
+            {
+                this.txtContent.Invoke(new Action<string>(this.AppendContext), message);
+                return;
+            }
+
+            this.txtContent.AppendText(message + Environment.NewLine);
+            this.txtContent.SelectionStart = this.txtContent.Text.Length;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (videoSource == null)
-                return;
-            Bitmap bitmap = vedioPalyer.GetCurrentVideoFrame();
-            string fileName = "54250.jpg";//DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss-ff") + ".jpg";
-            bitmap.Save(@"E:\temp\" + fileName, ImageFormat.Jpeg);
-            bitmap.Dispose();
+            if (vedioPalyer.IsRunning)
+            {
+                vedioPalyer.GetCurrentVideoFrame().Save(@"d:\" + Guid.NewGuid().ToString() + ".bmp", ImageFormat.Bmp);
+            }
+        }
+
+        private class FilterInfoItem
+        {
+            public FilterInfoItem(FilterInfo filterInfo)
+            {
+                this.FilterInfo = filterInfo;
+            }
+
+            public FilterInfo FilterInfo
+            {
+                get;
+                private set;
+            }
+
+            public override string ToString()
+            {
+                return this.FilterInfo.Name;
+            }
+        }
+
+        protected override void OnClosed(EventArgs e)
+        {
+            try
+            {
+                if (vedioPalyer.IsRunning)
+                {
+                    vedioPalyer.Stop();
+                }
+            }
+            catch (Exception ex)
+            {
+            }
+            finally
+            {
+                base.OnClosed(e);
+            }
         }
     }
 }

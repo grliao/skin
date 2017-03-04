@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace SkinTalk
 {
-    public class SkinService : ISkinService
+    internal class SkinService : ISkinService
     {
         public ImageInfo ProcessImage(string imageType, string rgb, string resize, string image)
         {
