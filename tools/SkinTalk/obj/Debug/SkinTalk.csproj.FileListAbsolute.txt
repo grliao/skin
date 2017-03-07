@@ -1,0 +1,11 @@
+E:\skin\tools\SkinTalk\bin\Debug\SkinTalk.pdb
+E:\skin\tools\SkinTalk\bin\Debug\AForge.Controls.dll
+E:\skin\tools\SkinTalk\bin\Debug\AForge.dll
+E:\skin\tools\SkinTalk\bin\Debug\AForge.Imaging.dll
+E:\skin\tools\SkinTalk\bin\Debug\AForge.Math.dll
+E:\skin\tools\SkinTalk\bin\Debug\AForge.Video.dll
+E:\skin\tools\SkinTalk\obj\Debug\SkinTalk.pdb
+E:\skin\tools\SkinTalk\bin\Debug\SkinTalk.dll.config
+E:\skin\tools\SkinTalk\bin\Debug\SkinTalk.dll
+E:\skin\tools\SkinTalk\obj\Debug\SkinTalk.dll
+E:\skin\tools\SkinTalk\obj\Debug\SkinTalk.csprojResolveAssemblyReference.cache

@@ -1,4 +1,5 @@
-﻿using SkinTalkAPI.Calculator;
+﻿using SkinTalk.Core;
+using SkinTalkAPI.Calculator;
 using SkinTalkAPI.Model;
 using System;
 using System.Collections.Generic;
@@ -12,16 +13,11 @@ using System.Threading.Tasks;
 
 namespace SkinTalk
 {
-    internal class SkinService : ISkinService
+    public class SkinService : ISkinService
     {
-        public ImageInfo ProcessImage(string imageType, string rgb, string resize, string image)
+        public ImageInfo ProcessImage(AnalysisType imageType, string rgb, bool resize, string image)
         {
             ImageInfo result = new ImageInfo();
-
-            if (string.IsNullOrWhiteSpace(imageType))
-            {
-                return result;
-            }
 
             if (string.IsNullOrWhiteSpace(image))
             {
@@ -30,7 +26,14 @@ namespace SkinTalk
 
             Bitmap inputImage = GetImageFromByte(image);
 
-            if (resize == "Y")
+            return ProcessImage(imageType, rgb, resize, inputImage);
+        }
+
+        public ImageInfo ProcessImage(AnalysisType imageType, string rgb, bool resize, Bitmap inputImage)
+        {
+            ImageInfo result = new ImageInfo();
+
+            if (resize)
             {
                 inputImage = new System.Drawing.Bitmap(inputImage, new System.Drawing.Size(900, 900));
                 int cutSize = 480;
@@ -46,36 +49,36 @@ namespace SkinTalk
 
             AbstractCalculator abstractCalculator = null;
             switch (imageType)
-            { 
-                case "lens" :
+            {
+                case AnalysisType.Lens:
                     abstractCalculator = new InstallLensCalculator(inputImage);
                     break;
 
-                case "human":
+                case AnalysisType.Human:
                     abstractCalculator = new HumanSkinCalculator(inputImage);
                     break;
 
-                case "inflammation":
+                case AnalysisType.Inflammation:
                     abstractCalculator = new InflammationCalculator(inputImage);
                     break;
 
-                case "mositure":
+                case AnalysisType.Mositure:
                     abstractCalculator = new MositureCalculator(inputImage);
                     break;
 
-                case "oil":
+                case AnalysisType.Oil:
                     abstractCalculator = new OilValueCalclator(inputImage);
                     break;
 
-                case "pigment":
+                case AnalysisType.Pigment:
                     abstractCalculator = new PigmentCalculator(inputImage);
                     break;
 
-                case "pores":
+                case AnalysisType.Pores:
                     abstractCalculator = new PoresCalculator(inputImage);
                     break;
 
-                case "texture":
+                case AnalysisType.Texture:
                     abstractCalculator = new TextureCalculator(inputImage);
                     break;
             }

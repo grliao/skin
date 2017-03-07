@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DD000628-528E-4DE0-A3C5-C057B23CAE9B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SkinTalk</RootNamespace>
     <AssemblyName>SkinTalk</AssemblyName>
@@ -52,6 +52,9 @@
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>rjliao.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge">
       <HintPath>lib\AForge.dll</HintPath>
@@ -94,6 +97,7 @@
     <Compile Include="Calculator\PigmentCalculator.cs" />
     <Compile Include="Calculator\PoresCalculator.cs" />
     <Compile Include="Calculator\TextureCalculator.cs" />
+    <Compile Include="Core\AnalysisType.cs" />
     <Compile Include="Core\BinaryStreamStack.cs" />
     <Compile Include="Core\FilePart.cs" />
     <Compile Include="Core\FormDataFormatter.cs" />
@@ -127,6 +131,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy  "$(TargetDir)$(TargetName).*"  "$(SolutionDir)..\..\Release\"</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

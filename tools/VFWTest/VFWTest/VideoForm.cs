@@ -1,4 +1,5 @@
 ﻿using AForge.Video.DirectShow;
+using SkinTalk;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -128,11 +129,51 @@ namespace VFWTest
             this.txtContent.SelectionStart = this.txtContent.Text.Length;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void StartAnalysis(object sender, EventArgs e)
         {
             if (vedioPalyer.IsRunning)
             {
-                vedioPalyer.GetCurrentVideoFrame().Save(@"d:\" + Guid.NewGuid().ToString() + ".bmp", ImageFormat.Bmp);
+                var image = (Bitmap)vedioPalyer.GetCurrentVideoFrame().Clone();
+                image.Save(@"d:\" + Guid.NewGuid().ToString() + ".bmp", ImageFormat.Bmp);
+
+                Dictionary<string, string> result = new Dictionary<string, string>();
+
+                try
+                {
+                    this.Cursor = Cursors.WaitCursor;
+
+                    SkinService service = new SkinService();
+
+                    var imageResult = service.ProcessImage(SkinTalk.Core.AnalysisType.Human, null, true, (Bitmap)image.Clone());
+                    result.Add("肤色", imageResult.Score.ToString());
+
+                    imageResult = service.ProcessImage(SkinTalk.Core.AnalysisType.Inflammation, null, true, (Bitmap)image.Clone());
+                    result.Add("炎症", imageResult.Score.ToString());
+
+                    imageResult = service.ProcessImage(SkinTalk.Core.AnalysisType.Mositure, null, true, (Bitmap)image.Clone());
+                    result.Add("水分", imageResult.Score.ToString());
+
+                    imageResult = service.ProcessImage(SkinTalk.Core.AnalysisType.Oil, null, true, (Bitmap)image.Clone());
+                    result.Add("油脂", imageResult.Score.ToString());
+
+                    imageResult = service.ProcessImage(SkinTalk.Core.AnalysisType.Pigment, null, true, (Bitmap)image.Clone());
+                    result.Add("色素", imageResult.Score.ToString());
+
+                    imageResult = service.ProcessImage(SkinTalk.Core.AnalysisType.Pores, null, true, (Bitmap)image.Clone());
+                    result.Add("毛孔", imageResult.Score.ToString());
+
+                    imageResult = service.ProcessImage(SkinTalk.Core.AnalysisType.Texture, null, true, (Bitmap)image.Clone());
+                    result.Add("纹理", imageResult.Score.ToString());
+                }
+                finally
+                {
+                    this.Cursor = Cursors.Default;
+                }
+
+                ResultForm resultForm = new ResultForm();
+                resultForm.StartPosition = FormStartPosition.CenterParent;
+                resultForm.ItemResults = result;
+                resultForm.ShowDialog();
             }
         }
 

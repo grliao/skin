@@ -70,7 +70,7 @@ namespace VFWTest
             this.btnAnalysis.TabIndex = 1;
             this.btnAnalysis.Text = "分析";
             this.btnAnalysis.UseVisualStyleBackColor = true;
-            this.btnAnalysis.Click += new System.EventHandler(this.button2_Click);
+            this.btnAnalysis.Click += new System.EventHandler(this.StartAnalysis);
             // 
             // btnConnect
             // 
