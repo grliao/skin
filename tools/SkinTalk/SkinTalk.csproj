@@ -115,7 +115,6 @@
     <Compile Include="SkinService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="rjliao.pfx" />
   </ItemGroup>
   <ItemGroup>
