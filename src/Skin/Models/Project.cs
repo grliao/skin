@@ -54,7 +54,7 @@ namespace Skin.Models
         /// <summary>
         /// 肤色
         /// </summary>
-        public ProjectProperty SkinColour
+        public ProjectProperty? SkinColor
         {
             get;
             set;
@@ -63,7 +63,7 @@ namespace Skin.Models
         /// <summary>
         /// 水分
         /// </summary>
-        public ProjectProperty WaterContent
+        public ProjectProperty? WaterContent
         {
             get;
             set;
@@ -73,7 +73,7 @@ namespace Skin.Models
         /// 毛孔
         /// </summary>
        
-        public ProjectProperty Pore
+        public ProjectProperty? Pore
         {
             get;
             set;
@@ -82,7 +82,7 @@ namespace Skin.Models
         /// <summary>
         /// 炎症
         /// </summary>
-        public ProjectProperty Inflammation
+        public ProjectProperty? Inflammation
         {
             get;
             set;
@@ -91,7 +91,7 @@ namespace Skin.Models
         /// <summary>
         /// 色素
         /// </summary>
-        public ProjectProperty Pigment
+        public ProjectProperty? Pigment
         {
             get;
             set;
@@ -100,7 +100,7 @@ namespace Skin.Models
         /// <summary>
         /// 敏感
         /// </summary>
-        public ProjectProperty Sensitive
+        public ProjectProperty? Sensitive
         {
             get;
             set;
@@ -109,7 +109,7 @@ namespace Skin.Models
         /// <summary>
         /// 是否化妆
         /// </summary>
-        public bool IsTodayMakeup
+        public bool? IsTodayMakeup
         {
             get;
             set;
@@ -118,7 +118,7 @@ namespace Skin.Models
         /// <summary>
         /// 肤色关注
         /// </summary>
-        public ProjectProperty SkinCare
+        public ProjectProperty? SkinCare
         {
             get;
             set;
@@ -127,7 +127,7 @@ namespace Skin.Models
         /// <summary>
         /// 年龄分类
         /// </summary>
-        public AgeCategory AgeCategory
+        public AgeCategory? AgeCategory
         {
             get;
             set;
@@ -136,18 +136,19 @@ namespace Skin.Models
         /// <summary>
         /// 性别
         /// </summary>
-        public SexType SexType
+        public SexType? SexType
         {
             get;
             set;
         }
     }
 
+    [Flags]
     public enum ProjectProperty
     {
-        A,
-        B,
-        C,
+        A = 1,
+        B = 2,
+        C = 4,
     }
 
     public enum AgeCategory

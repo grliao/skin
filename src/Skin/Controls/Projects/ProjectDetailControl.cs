@@ -28,6 +28,9 @@ namespace Skin.Controls.Projects
                 {
                     this.pbProjectImage.Image = ImageHelper.BytesToImage(value.ImageData);
                 }
+
+                this.txtName.Text = value.Name;
+                this.txtContent.Text = value.BriefIntroduction;
             }
         }
 

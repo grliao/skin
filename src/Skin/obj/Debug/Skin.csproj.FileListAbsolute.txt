@@ -29,7 +29,6 @@ E:\Skin\skin\src\Skin\bin\Debug\EntityFramework.SqlServer.xml
 E:\Skin\skin\src\Skin\bin\Debug\System.Data.SQLite.xml
 E:\Skin\skin\src\Skin\bin\Debug\Interop.WMPLib.dll
 E:\Skin\skin\src\Skin\bin\Debug\AxInterop.WMPLib.dll
-E:\Skin\skin\src\Skin\obj\Debug\Skin.csprojResolveAssemblyReference.cache
 E:\Skin\skin\src\Skin\obj\Debug\Interop.WMPLib.dll
 E:\Skin\skin\src\Skin\obj\Debug\AxInterop.WMPLib.dll
 E:\Skin\skin\src\Skin\obj\Debug\Skin.csproj.ResolveComReference.cache
@@ -45,3 +44,5 @@ E:\Skin\skin\src\Skin\obj\Debug\Skin.pdb
 E:\Skin\skin\src\Skin\obj\Debug\Skin.Controls.Projects.ProjectDetailControl.resources
 E:\Skin\skin\src\Skin\obj\Debug\Skin.Controls.Projects.ProjectListControl.resources
 E:\Skin\skin\src\Skin\obj\Debug\Skin.Controls.Projects.NewProjectControl.resources
+E:\Skin\skin\src\Skin\obj\Debug\Skin.csprojResolveAssemblyReference.cache
+E:\Skin\skin\src\Skin\obj\Debug\Skin.Controls.Projects.EnterMainControl.resources

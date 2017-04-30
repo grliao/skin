@@ -95,6 +95,12 @@
     <Compile Include="Controls\AutoResizeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controls\Member\EnterMainControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Member\EnterMainControl.Designer.cs">
+      <DependentUpon>EnterMainControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Projects\NewProjectControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -106,6 +112,12 @@
     </Compile>
     <Compile Include="Controls\Projects\ProjectDetailControl.Designer.cs">
       <DependentUpon>ProjectDetailControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TransparentTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\TransparentCheckBox.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Controls\TransparentPictureBox.cs">
       <SubType>Component</SubType>
@@ -144,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\About\MediaPlayerControl.resx">
       <DependentUpon>MediaPlayerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Member\EnterMainControl.resx">
+      <DependentUpon>EnterMainControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Projects\NewProjectControl.resx">
       <DependentUpon>NewProjectControl.cs</DependentUpon>
@@ -291,6 +306,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\SaveProject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controls\Customer\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Customer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EnterMain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Member.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.104.0\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net40\System.Data.SQLite.Core.targets')" />

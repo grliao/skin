@@ -42,15 +42,24 @@ namespace Skin.HomePage
             this.pbExit.MouseClick += CloseApplication;
 
             // 关于
+            this.pbEnter.MouseClick += PbEnter_MouseClick;
             this.pbAbout.MouseClick += OnCompanyAbout;
             this.pbNewProject.MouseClick += OnNewProject;
         }
 
+        // 进入
+        private void PbEnter_MouseClick(object sender, MouseEventArgs e)
+        {
+            MainForm.Instance.SetCurrentContentPanel(typeof(EnterMainControl));
+        }
+
+        // 关于
         private void OnCompanyAbout(object sender, MouseEventArgs e)
         {
             MainForm.Instance.SetCurrentContentPanel(typeof(AboutControl));
         }
 
+        // 退出
         private void CloseApplication(object sender, MouseEventArgs e)
         {
             this.ParentForm.Close();

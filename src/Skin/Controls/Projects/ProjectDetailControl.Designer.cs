@@ -28,16 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.txtContent = new Skin.Controls.TransparentTextBox();
             this.pbProjectDetail = new Skin.Controls.TransparentPictureBox();
             this.pbHomePage = new Skin.Controls.TransparentPictureBox();
             this.pbPrevious = new Skin.Controls.TransparentPictureBox();
             this.pbProjectImage = new Skin.Controls.TransparentPictureBox();
+            this.txtName = new Skin.Controls.TransparentTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbProjectDetail)).BeginInit();
             this.pbProjectDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHomePage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPrevious)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProjectImage)).BeginInit();
             this.SuspendLayout();
+            // 
+            // txtContent
+            // 
+            this.txtContent.Location = new System.Drawing.Point(435, 172);
+            this.txtContent.Multiline = true;
+            this.txtContent.Name = "txtContent";
+            this.txtContent.Size = new System.Drawing.Size(485, 219);
+            this.txtContent.TabIndex = 1;
+            this.txtContent.TabStop = false;
             // 
             // pbProjectDetail
             // 
@@ -86,10 +97,21 @@
             this.pbProjectImage.TabIndex = 1;
             this.pbProjectImage.TabStop = false;
             // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(366, 122);
+            this.txtName.Multiline = true;
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(554, 30);
+            this.txtName.TabIndex = 2;
+            this.txtName.TabStop = false;
+            // 
             // ProjectDetailControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtContent);
             this.Controls.Add(this.pbProjectDetail);
             this.Name = "ProjectDetailControl";
             this.Size = new System.Drawing.Size(1024, 560);
@@ -99,6 +121,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbPrevious)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProjectImage)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -108,5 +131,7 @@
         private TransparentPictureBox pbProjectImage;
         private TransparentPictureBox pbHomePage;
         private TransparentPictureBox pbPrevious;
+        private TransparentTextBox txtContent;
+        private TransparentTextBox txtName;
     }
 }
