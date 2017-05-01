@@ -44,5 +44,7 @@ E:\Skin\skin\src\Skin\obj\Debug\Skin.pdb
 E:\Skin\skin\src\Skin\obj\Debug\Skin.Controls.Projects.ProjectDetailControl.resources
 E:\Skin\skin\src\Skin\obj\Debug\Skin.Controls.Projects.ProjectListControl.resources
 E:\Skin\skin\src\Skin\obj\Debug\Skin.Controls.Projects.NewProjectControl.resources
-E:\Skin\skin\src\Skin\obj\Debug\Skin.csprojResolveAssemblyReference.cache
 E:\Skin\skin\src\Skin\obj\Debug\Skin.Controls.Projects.EnterMainControl.resources
+E:\Skin\skin\src\Skin\obj\Debug\Skin.Controls.Projects.MemberLoginControl.resources
+E:\Skin\skin\src\Skin\obj\Debug\Skin.csprojResolveAssemblyReference.cache
+E:\Skin\skin\src\Skin\obj\Debug\Skin.Controls.Projects.MemberRegistControl.resources

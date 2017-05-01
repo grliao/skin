@@ -31,30 +31,30 @@
             this.pbEnterMain = new Skin.Controls.TransparentPictureBox();
             this.pbHomePage = new Skin.Controls.TransparentPictureBox();
             this.pbPrevious = new Skin.Controls.TransparentPictureBox();
-            this.pbMember = new Skin.Controls.TransparentPictureBox();
             this.pbCustomer = new Skin.Controls.TransparentPictureBox();
+            this.pbMember = new Skin.Controls.TransparentPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbEnterMain)).BeginInit();
             this.pbEnterMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbHomePage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPrevious)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMember)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMember)).BeginInit();
             this.SuspendLayout();
             // 
-            // pbProjectList
+            // pbEnterMain
             // 
             this.pbEnterMain.BackColor = System.Drawing.Color.Transparent;
             this.pbEnterMain.Controls.Add(this.pbHomePage);
             this.pbEnterMain.Controls.Add(this.pbPrevious);
+            this.pbEnterMain.Controls.Add(this.pbCustomer);
+            this.pbEnterMain.Controls.Add(this.pbMember);
             this.pbEnterMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbEnterMain.Image = global::Skin.Resources.EnterMain;
             this.pbEnterMain.Location = new System.Drawing.Point(0, 0);
-            this.pbEnterMain.Name = "pbProjectList";
+            this.pbEnterMain.Name = "pbEnterMain";
             this.pbEnterMain.Size = new System.Drawing.Size(1024, 560);
             this.pbEnterMain.TabIndex = 0;
             this.pbEnterMain.TabStop = false;
-            this.pbEnterMain.Controls.Add(this.pbCustomer);
-            this.pbEnterMain.Controls.Add(this.pbMember);
             // 
             // pbHomePage
             // 
@@ -79,33 +79,32 @@
             this.pbPrevious.TabIndex = 5;
             this.pbPrevious.TabStop = false;
             // 
-            // pbMember
-            // 
-            this.pbMember.BackColor = System.Drawing.Color.Transparent;
-            this.pbMember.Image = global::Skin.Resources.Member;
-            this.pbMember.Location = new System.Drawing.Point(760, 190);
-            this.pbMember.Name = "pbMember";
-            this.pbMember.Size = new System.Drawing.Size(139, 45);
-            this.pbMember.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbMember.TabIndex = 1;
-            this.pbMember.TabStop = false;
-            // 
             // pbCustomer
             // 
             this.pbCustomer.BackColor = System.Drawing.Color.Transparent;
             this.pbCustomer.Image = global::Skin.Resources.Customer;
-            this.pbCustomer.Location = new System.Drawing.Point(760, 253);
+            this.pbCustomer.Location = new System.Drawing.Point(760, 139);
             this.pbCustomer.Name = "pbCustomer";
             this.pbCustomer.Size = new System.Drawing.Size(139, 45);
             this.pbCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbCustomer.TabIndex = 2;
             this.pbCustomer.TabStop = false;
             // 
+            // pbMember
+            // 
+            this.pbMember.BackColor = System.Drawing.Color.Transparent;
+            this.pbMember.Image = global::Skin.Resources.Member;
+            this.pbMember.Location = new System.Drawing.Point(760, 203);
+            this.pbMember.Name = "pbMember";
+            this.pbMember.Size = new System.Drawing.Size(139, 45);
+            this.pbMember.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbMember.TabIndex = 1;
+            this.pbMember.TabStop = false;
+            // 
             // EnterMainControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
             this.Controls.Add(this.pbEnterMain);
             this.Name = "EnterMainControl";
             this.Size = new System.Drawing.Size(1024, 560);
@@ -113,8 +112,8 @@
             this.pbEnterMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbHomePage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPrevious)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pbMember)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMember)).EndInit();
             this.ResumeLayout(false);
 
         }

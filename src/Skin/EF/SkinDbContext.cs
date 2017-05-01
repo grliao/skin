@@ -23,6 +23,12 @@ namespace Skin.EF
             set;
         }
 
+        public IDbSet<Member> Members
+        {
+            get;
+            set;
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             Database.SetInitializer(new SqliteDropCreateDatabaseWhenModelChanges<SkinDbContext>(modelBuilder,typeof(CustomHistory)));

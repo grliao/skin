@@ -95,6 +95,18 @@
     <Compile Include="Controls\AutoResizeControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Controls\Member\MemberRegistControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Member\MemberRegistControl.Designer.cs">
+      <DependentUpon>MemberRegistControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Member\MemberLoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\Member\MemberLoginControl.Designer.cs">
+      <DependentUpon>MemberLoginControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\Member\EnterMainControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +148,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Member.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Controls\Projects\ProjectListControl.cs">
@@ -150,12 +163,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Utils\ApplicationConfiguration.cs" />
     <Compile Include="Utils\ImageHelper.cs" />
+    <Compile Include="Utils\MD5Util.cs" />
     <EmbeddedResource Include="Controls\About\AboutControl.resx">
       <DependentUpon>AboutControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\About\MediaPlayerControl.resx">
       <DependentUpon>MediaPlayerControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Member\MemberRegistControl.resx">
+      <DependentUpon>MemberRegistControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\Member\MemberLoginControl.resx">
+      <DependentUpon>MemberLoginControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\Member\EnterMainControl.resx">
       <DependentUpon>EnterMainControl.cs</DependentUpon>
@@ -318,6 +339,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Member.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MemberLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MemberLoginMain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MemberRegister.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number_3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number_4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number_5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number_6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number_7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number_8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Number_9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MemberCancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MemberModify.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MemberRegist.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MemberSave.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.104.0\build\net40\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.104.0\build\net40\System.Data.SQLite.Core.targets')" />
