@@ -31,17 +31,17 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProjectListControl));
             this.cboxSequence = new System.Windows.Forms.ComboBox();
             this.dgvProject = new System.Windows.Forms.DataGridView();
+            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSequence = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pbProjectList = new Skin.Controls.TransparentPictureBox();
             this.pbDeleteProject = new Skin.Controls.TransparentPictureBox();
             this.pbNewProject = new Skin.Controls.TransparentPictureBox();
             this.pbHomePage = new Skin.Controls.TransparentPictureBox();
             this.pbPrevious = new Skin.Controls.TransparentPictureBox();
             this.pbSearch = new Skin.Controls.TransparentPictureBox();
-            this.txtProjectCode = new System.Windows.Forms.TextBox();
-            this.txtProjectName = new System.Windows.Forms.TextBox();
-            this.colName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSequence = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtProjectCode = new Skin.Controls.TransparentTextBox();
+            this.txtProjectName = new Skin.Controls.TransparentTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbProjectList)).BeginInit();
             this.pbProjectList.SuspendLayout();
@@ -55,13 +55,13 @@
             // cboxSequence
             // 
             this.cboxSequence.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cboxSequence.DrawMode = System.Windows.Forms.DrawMode.Normal;
             this.cboxSequence.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxSequence.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboxSequence.FormattingEnabled = true;
-            this.cboxSequence.ItemHeight = 25;
-            this.cboxSequence.Location = new System.Drawing.Point(452, 49);
+            this.cboxSequence.ItemHeight = 12;
+            this.cboxSequence.Location = new System.Drawing.Point(454, 53);
             this.cboxSequence.Name = "cboxSequence";
-            this.cboxSequence.Size = new System.Drawing.Size(127, 31);
+            this.cboxSequence.Size = new System.Drawing.Size(124, 20);
             this.cboxSequence.TabIndex = 1;
             // 
             // dgvProject
@@ -81,6 +81,30 @@
             this.dgvProject.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProject.Size = new System.Drawing.Size(784, 341);
             this.dgvProject.TabIndex = 2;
+            // 
+            // colName
+            // 
+            this.colName.DataPropertyName = "Name";
+            this.colName.HeaderText = "产品名称";
+            this.colName.Name = "colName";
+            this.colName.ReadOnly = true;
+            this.colName.Width = 250;
+            // 
+            // colSequence
+            // 
+            this.colSequence.DataPropertyName = "Sequence";
+            this.colSequence.HeaderText = "产品序列";
+            this.colSequence.Name = "colSequence";
+            this.colSequence.ReadOnly = true;
+            this.colSequence.Width = 250;
+            // 
+            // colCode
+            // 
+            this.colCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colCode.DataPropertyName = "Code";
+            this.colCode.HeaderText = "产品代码";
+            this.colCode.Name = "colCode";
+            this.colCode.ReadOnly = true;
             // 
             // pbProjectList
             // 
@@ -161,44 +185,20 @@
             // txtProjectCode
             // 
             this.txtProjectCode.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtProjectCode.Location = new System.Drawing.Point(704, 49);
-            this.txtProjectCode.Multiline = true;
+            this.txtProjectCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProjectCode.Location = new System.Drawing.Point(705, 57);
             this.txtProjectCode.Name = "txtProjectCode";
-            this.txtProjectCode.Size = new System.Drawing.Size(127, 29);
+            this.txtProjectCode.Size = new System.Drawing.Size(124, 14);
             this.txtProjectCode.TabIndex = 2;
             // 
             // txtProjectName
             // 
             this.txtProjectName.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.txtProjectName.Location = new System.Drawing.Point(201, 49);
-            this.txtProjectName.Multiline = true;
+            this.txtProjectName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtProjectName.Location = new System.Drawing.Point(202, 57);
             this.txtProjectName.Name = "txtProjectName";
-            this.txtProjectName.Size = new System.Drawing.Size(127, 29);
+            this.txtProjectName.Size = new System.Drawing.Size(124, 14);
             this.txtProjectName.TabIndex = 1;
-            // 
-            // colName
-            // 
-            this.colName.DataPropertyName = "Name";
-            this.colName.HeaderText = "产品名称";
-            this.colName.Name = "colName";
-            this.colName.ReadOnly = true;
-            this.colName.Width = 250;
-            // 
-            // colSequence
-            // 
-            this.colSequence.DataPropertyName = "Sequence";
-            this.colSequence.HeaderText = "产品序列";
-            this.colSequence.Name = "colSequence";
-            this.colSequence.ReadOnly = true;
-            this.colSequence.Width = 250;
-            // 
-            // colCode
-            // 
-            this.colCode.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colCode.DataPropertyName = "Code";
-            this.colCode.HeaderText = "产品代码";
-            this.colCode.Name = "colCode";
-            this.colCode.ReadOnly = true;
             // 
             // ProjectListControl
             // 
@@ -225,8 +225,8 @@
         #endregion
 
         private Controls.TransparentPictureBox pbProjectList;
-        private System.Windows.Forms.TextBox txtProjectName;
-        private System.Windows.Forms.TextBox txtProjectCode;
+        private TransparentTextBox txtProjectName;
+        private TransparentTextBox txtProjectCode;
         private Controls.TransparentPictureBox pbSearch;
         private Controls.TransparentPictureBox pbHomePage;
         private Controls.TransparentPictureBox pbPrevious;

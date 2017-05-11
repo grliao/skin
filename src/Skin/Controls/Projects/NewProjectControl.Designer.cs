@@ -31,10 +31,10 @@
             this.pbNewProject = new Skin.Controls.TransparentPictureBox();
             this.pbSave = new Skin.Controls.TransparentPictureBox();
             this.pbImage = new Skin.Controls.TransparentPictureBox();
-            this.txtBriefIntroduction = new System.Windows.Forms.TextBox();
-            this.txtCode = new System.Windows.Forms.TextBox();
-            this.txtSequence = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtBriefIntroduction = new Skin.Controls.TransparentTextBox();
+            this.txtCode = new Skin.Controls.TransparentTextBox();
+            this.txtSequence = new Skin.Controls.TransparentTextBox();
+            this.txtName = new Skin.Controls.TransparentTextBox();
             this.pbHomePage = new Skin.Controls.TransparentPictureBox();
             this.pbPrevious = new Skin.Controls.TransparentPictureBox();
             this.cboxSkinColorA = new Skin.Controls.TransparentCheckBox();
@@ -108,43 +108,44 @@
             // pbImage
             // 
             this.pbImage.BackColor = System.Drawing.Color.Transparent;
-            this.pbImage.Location = new System.Drawing.Point(201, 309);
+            this.pbImage.Location = new System.Drawing.Point(201, 315);
             this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(106, 115);
+            this.pbImage.Size = new System.Drawing.Size(106, 106);
             this.pbImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbImage.TabIndex = 15;
             this.pbImage.TabStop = false;
             // 
             // txtBriefIntroduction
             // 
-            this.txtBriefIntroduction.Location = new System.Drawing.Point(201, 189);
+            this.txtBriefIntroduction.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBriefIntroduction.Location = new System.Drawing.Point(202, 189);
             this.txtBriefIntroduction.Multiline = true;
             this.txtBriefIntroduction.Name = "txtBriefIntroduction";
-            this.txtBriefIntroduction.Size = new System.Drawing.Size(228, 114);
+            this.txtBriefIntroduction.Size = new System.Drawing.Size(224, 114);
             this.txtBriefIntroduction.TabIndex = 14;
             // 
             // txtCode
             // 
-            this.txtCode.Location = new System.Drawing.Point(201, 156);
-            this.txtCode.Multiline = true;
+            this.txtCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCode.Location = new System.Drawing.Point(202, 162);
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(228, 27);
+            this.txtCode.Size = new System.Drawing.Size(225, 14);
             this.txtCode.TabIndex = 13;
             // 
             // txtSequence
             // 
-            this.txtSequence.Location = new System.Drawing.Point(201, 120);
-            this.txtSequence.Multiline = true;
+            this.txtSequence.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSequence.Location = new System.Drawing.Point(202, 127);
             this.txtSequence.Name = "txtSequence";
-            this.txtSequence.Size = new System.Drawing.Size(228, 27);
+            this.txtSequence.Size = new System.Drawing.Size(225, 14);
             this.txtSequence.TabIndex = 12;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(201, 83);
-            this.txtName.Multiline = true;
+            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtName.Location = new System.Drawing.Point(203, 90);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(228, 27);
+            this.txtName.Size = new System.Drawing.Size(225, 14);
             this.txtName.TabIndex = 11;
             // 
             // pbHomePage
@@ -523,10 +524,10 @@
         private TransparentPictureBox pbNewProject;
         private TransparentPictureBox pbHomePage;
         private TransparentPictureBox pbPrevious;
-        private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtSequence;
-        private System.Windows.Forms.TextBox txtCode;
-        private System.Windows.Forms.TextBox txtBriefIntroduction;
+        private TransparentTextBox txtName;
+        private TransparentTextBox txtSequence;
+        private TransparentTextBox txtCode;
+        private TransparentTextBox txtBriefIntroduction;
         private TransparentPictureBox pbImage;
         private TransparentPictureBox pbSave;
         private TransparentCheckBox cboxSkinColorA;

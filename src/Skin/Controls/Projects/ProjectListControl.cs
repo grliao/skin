@@ -120,8 +120,12 @@ namespace Skin.Controls.Projects
             }
             using (SkinDbContext context = new SkinDbContext())
             {
-                context.Projects.Remove(this.CurrentProject);
-                context.SaveChanges();
+                var dbProject = context.Projects.FirstOrDefault(p => p.Id == this.CurrentProject.Id);
+                if (dbProject != null)
+                {
+                    context.Projects.Remove(dbProject);
+                    context.SaveChanges();
+                }
             }
 
             // 执行重新查询

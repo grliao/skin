@@ -75,6 +75,7 @@ namespace Skin.Utils
                 }
 
                 _currentUser = member;
+                result.IsSuccess = true;
                 _isLogined = true;
             }
 
