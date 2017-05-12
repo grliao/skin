@@ -2,24 +2,24 @@ using System;
 using System.Runtime.Serialization;
 namespace SkinTalkAPI.Model
 {
-    [DataContract]
+    //[DataContract]
 	public class ImageInfo
 	{
-        [DataMember]
+        //[DataMember]
 		public string ImageInBase64
 		{
 			get;
 			set;
 		}
 
-        [DataMember]
+        //[DataMember]
 		public int Score
 		{
 			get;
 			set;
 		}
 
-        [DataMember]
+        //[DataMember]
 		public string PassValidation
 		{
 			get;

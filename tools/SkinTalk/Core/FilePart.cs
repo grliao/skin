@@ -24,19 +24,19 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-using System.Linq;
+//using System.Linq;
 
 namespace Yyf.Core.Common.WCF.HttpMultipartParser
 {
     using System.IO;
     using System.Runtime.Serialization;
-    using System.ServiceModel;
+    //using System.ServiceModel;
 
     /// <summary>
     ///     Represents a single file extracted from a multipart/form-data
     ///     stream.
     /// </summary>
-    [DataContract]
+    //[DataContract]
     public class FilePart
     {
         public FilePart()
@@ -83,7 +83,7 @@ namespace Yyf.Core.Common.WCF.HttpMultipartParser
         public FilePart(string name, string fileName, byte[] data, string contentType, string contentDisposition)
         {
             this.Name = name;
-            this.FileName = fileName.Split(Path.GetInvalidFileNameChars()).Last();
+            //this.FileName = fileName.Split(Path.GetInvalidFileNameChars()).Last();
             this.Data = data;
             this.ContentType = contentType;
             this.ContentDisposition = contentDisposition;
@@ -96,31 +96,31 @@ namespace Yyf.Core.Common.WCF.HttpMultipartParser
         /// <summary>
         ///     Gets the data.
         /// </summary>
-        [DataMember]
+        //[DataMember]
         public byte[] Data { get; private set; }
 
         /// <summary>
         ///     Gets or sets the file name.
         /// </summary>
-        [DataMember]
+        //[DataMember]
         public string FileName { get; set; }
 
         /// <summary>
         ///     Gets or sets the name.
         /// </summary>
-        [DataMember]
+        //[DataMember]
         public string Name { get; set; }
 
         /// <summary>
         ///     Gets or sets the content-type. Defaults to text/plain if unspecified.
         /// </summary>
-        [DataMember]
+        //[DataMember]
         public string ContentType { get; set; }
 
         /// <summary>
         ///  Gets or sets the content-disposition. Defaults to form-data if unspecified.
         /// </summary>
-        [DataMember]
+        //[DataMember]
         public string ContentDisposition { get; set; }
 
         #endregion

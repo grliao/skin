@@ -62,9 +62,9 @@ namespace Skin.Controls.Projects
         private void OnSave(object sender, MouseEventArgs e)
         {
             string error = string.Empty;
-            if (this.IsValid(ref error))
+            if (!this.IsValid(ref error))
             {
-                MessageBox.Show(error);
+                MessageBox.Show(error,"注册会员");
                 return;
             }
 
@@ -125,7 +125,7 @@ namespace Skin.Controls.Projects
                 return false;
             }
 
-            Regex reg = new Regex(@"^[0 - 9] *$");
+            Regex reg = new Regex("^[0-9]*[1-9][0-9]*$");
             if (!reg.IsMatch(this.txtPassword.Text))
             {
                 error = "密码只允许输入数字";
@@ -137,6 +137,13 @@ namespace Skin.Controls.Projects
             {
                 error = "会员编号不允许为空";
                 this.txtNumber.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(this.txtName.Text))
+            {
+                error = "姓名不允许为空";
+                this.txtName.Focus();
                 return false;
             }
 
@@ -164,7 +171,7 @@ namespace Skin.Controls.Projects
 
             int birthDate;
 
-            if (int.TryParse(this.txtBirthDateYear.Text,out birthDate))
+            if (!int.TryParse(this.txtBirthDateYear.Text,out birthDate))
             {
                 error = "年请输入正整数";
                 this.txtBirthDateYear.Focus();
@@ -178,7 +185,7 @@ namespace Skin.Controls.Projects
                 return false;
             }
 
-            if (int.TryParse(this.txtBirthDateMonth.Text, out birthDate))
+            if (!int.TryParse(this.txtBirthDateMonth.Text, out birthDate))
             {
                 error = "月范围在1~12之间";
                 this.txtBirthDateMonth.Focus();
@@ -199,7 +206,7 @@ namespace Skin.Controls.Projects
                 return false;
             }
 
-            if (int.TryParse(this.txtBirthDateDay.Text, out birthDate))
+            if (!int.TryParse(this.txtBirthDateDay.Text, out birthDate))
             {
                 error = "日范围在1~31之间";
                 this.txtBirthDateDay.Focus();

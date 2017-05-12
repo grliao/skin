@@ -4,16 +4,16 @@ using SkinTalkAPI.Model;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
+//using System.Linq;
 using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.ServiceModel.Web;
+//using System.ServiceModel;
+//using System.ServiceModel.Web;
 using System.Text;
-using System.Threading.Tasks;
+//using System.Threading.Tasks;
 
 namespace SkinTalk
 {
-    [ServiceContract]
+    //[ServiceContract]
     public interface ISkinService
     {
        /// <summary>
@@ -24,8 +24,8 @@ namespace SkinTalk
        /// <param name="resize"></param>
        /// <param name="image"></param>
        /// <returns></returns>
-        [OperationContract]
-        [WebInvoke(Method = "POST", UriTemplate = "processImage", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedRequest)]
+        //[OperationContract]
+        //[WebInvoke(Method = "POST", UriTemplate = "processImage", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.WrappedRequest)]
         ImageInfo ProcessImage(AnalysisType imageType, string rgb, bool resize, string image);
 
         /// <summary>
