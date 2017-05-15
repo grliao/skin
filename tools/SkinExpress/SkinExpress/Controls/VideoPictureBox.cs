@@ -6,7 +6,7 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
-namespace VFWTest.Controls
+namespace SkinExpress.Controls
 {
     /// <summary>
     /// 文件图片控件

@@ -1,4 +1,4 @@
-﻿namespace VFWTest.Controls
+﻿namespace SkinExpress.Controls
 {
     partial class GlassButton
     {

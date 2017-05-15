@@ -9,9 +9,9 @@ using System.IO;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using VFWTest.Configuration;
+using SkinExpress.Configuration;
 
-namespace VFWTest
+namespace SkinExpress
 {
     public partial class VideoForm : Form
     {

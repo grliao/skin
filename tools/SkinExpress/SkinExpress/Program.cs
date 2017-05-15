@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 
 
-namespace VFWTest
+namespace SkinExpress
 {
     class Program
     {

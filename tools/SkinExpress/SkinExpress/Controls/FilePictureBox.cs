@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 
-namespace VFWTest.Controls
+namespace SkinExpress.Controls
 {
     /// <summary>
     /// 文件图片控件
@@ -55,7 +55,7 @@ namespace VFWTest.Controls
                 File.Copy(dialog.FileName, dest);
 
                 // 修改配置文件
-                VFWTest.Configuration.AppConfiguration.SaveImagePath(this.Name, dest);
+                SkinExpress.Configuration.AppConfiguration.SaveImagePath(this.Name, dest);
 
                 this.Load(dest);
             }

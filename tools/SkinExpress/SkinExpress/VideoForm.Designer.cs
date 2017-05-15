@@ -1,7 +1,7 @@
 ﻿
-using VFWTest.Controls;
+using SkinExpress.Controls;
 
-namespace VFWTest
+namespace SkinExpress
 {
     partial class VideoForm
     {
@@ -36,14 +36,14 @@ namespace VFWTest
             this.cboxDevice = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.palTable = new System.Windows.Forms.TableLayoutPanel();
-            this.videoPalyerA = new VFWTest.Controls.VideoPictureBox();
-            this.videoPalyerB = new VFWTest.Controls.VideoPictureBox();
-            this.pbImageA = new VFWTest.Controls.FilePictureBox();
-            this.pbImageB = new VFWTest.Controls.FilePictureBox();
-            this.btnClose = new VFWTest.Controls.GlassButton();
-            this.btnFullScreen = new VFWTest.Controls.GlassButton();
-            this.btnReset = new VFWTest.Controls.GlassButton();
-            this.btnConnect = new VFWTest.Controls.GlassButton();
+            this.videoPalyerA = new SkinExpress.Controls.VideoPictureBox();
+            this.videoPalyerB = new SkinExpress.Controls.VideoPictureBox();
+            this.pbImageA = new SkinExpress.Controls.FilePictureBox();
+            this.pbImageB = new SkinExpress.Controls.FilePictureBox();
+            this.btnClose = new SkinExpress.Controls.GlassButton();
+            this.btnFullScreen = new SkinExpress.Controls.GlassButton();
+            this.btnReset = new SkinExpress.Controls.GlassButton();
+            this.btnConnect = new SkinExpress.Controls.GlassButton();
             this.panel1.SuspendLayout();
             this.palTable.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.videoPalyerA)).BeginInit();
@@ -54,7 +54,7 @@ namespace VFWTest
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::VFWTest.Resources.Background;
+            this.panel1.BackgroundImage = global::SkinExpress.Resources.Background;
             this.panel1.Controls.Add(this.btnClose);
             this.panel1.Controls.Add(this.btnFullScreen);
             this.panel1.Controls.Add(this.btnReset);

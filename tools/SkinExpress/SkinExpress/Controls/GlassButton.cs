@@ -9,7 +9,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using PushButtonState = System.Windows.Forms.VisualStyles.PushButtonState;
 
-namespace VFWTest.Controls
+namespace SkinExpress.Controls
 {
     /// <summary>
     /// Represents a glass button control.
